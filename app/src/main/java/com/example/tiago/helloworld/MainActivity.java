@@ -9,19 +9,49 @@ import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
-    public ImageView imagem;
+    public ImageView imgIcon;
+    public ImageView imgColor;
+    public ImageView imgPink;
+    public ImageView imgGreen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        imagem = (ImageView) findViewById(R.id.imgIcon);
 
+        imgIcon = (ImageView) findViewById(R.id.imgIcon);
+        imgColor = (ImageView) findViewById(R.id.imgColor);
+        imgPink = (ImageView) findViewById(R.id.imgPink);
+        imgGreen = (ImageView) findViewById(R.id.imgGreen);
 
-        imagem.setOnClickListener(new View.OnClickListener(){
+        imgIcon.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, IconActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        imgIcon.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ColorActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        imgIcon.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, PinkActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        imgIcon.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, GreenActivity.class);
                 startActivity(intent);
             }
         });

@@ -17,7 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".IconActivity" />
-        <activity android:name=".ColorActivity"></activity>
+        <activity android:name=".ColorActivity" />
+        <activity android:name=".PinkActivity" />
+        <activity android:name=".GreenActivity"></activity>
     </application>
 
 </manifest>
